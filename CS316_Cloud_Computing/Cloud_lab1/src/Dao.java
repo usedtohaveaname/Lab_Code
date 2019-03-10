@@ -2,12 +2,10 @@ import java.sql.*;
 public class Dao {
     public  Dao(){}
     private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
-    //数据库连接地址
     private static final String URL = "jdbc:mysql://155.138.128.229:3306/cs316";
-    //用户名
     private static final String USER_NAME = "user1";
-    //密码
     private static final String PASSWORD = "user123456";
+
     public boolean login_authenticate(String username, String password) {
         Connection connection = null;
         try {
@@ -15,12 +13,20 @@ public class Dao {
             connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
             //execute mysql query
             String sql = "SELECT username, password FROM users where username = \""
-                    + username + "\" and password =\"" + password+"\"";
+                    + username + "\"";
             PreparedStatement prst = connection.prepareStatement(sql);
             ResultSet rs = prst.executeQuery();
-
-            while (rs.next()) {
-                System.out.println("用户名:" + rs.getString("username"));
+            if(rs.next()) {
+                System.out.println("get password:" + rs.getString("password"));
+                if (BCrypt.checkpw(password, rs.getString("password"))) {
+                    rs.close();
+                    prst.close();
+                    return true;
+                } else {
+                    rs.close();
+                    prst.close();
+                    return false;
+                }
             }
             rs.close();
             prst.close();
@@ -35,7 +41,7 @@ public class Dao {
                 }
             }
         }
-        return true;
+        return false;
     }
     public boolean register_user(String username, String password){
         Connection connection = null;
@@ -46,8 +52,9 @@ public class Dao {
             connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
             stmt = connection.createStatement();
             //insert user info to database
+            String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
             String sql = "insert into users (username, password)values" +
-                    "(\""+username+"\",\""+password+"\")";
+                    "(\""+username+"\",\""+hashed+"\")";
             stmt.execute(sql);
 
         } catch (SQLException se) {

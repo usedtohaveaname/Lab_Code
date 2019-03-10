@@ -7,8 +7,7 @@ public class ServerImpl extends UnicastRemoteObject implements ServerAction {
     };
     public boolean login (String username, String password) throws RemoteException{
         Dao dao = new Dao();
-        dao.login_authenticate(username, password);
-        return true;
+        return dao.login_authenticate(username, password);
     }
     public boolean register() throws RemoteException{
         System.out.println("register success!");
