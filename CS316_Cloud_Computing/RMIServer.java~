@@ -1,0 +1,22 @@
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
+
+public class RMIServer {
+    public RMIServer(){}
+    public static void main(String[] args) {
+        try {
+
+            LoginImpl loginObj = new LoginImpl();
+            Login stub = (Login) UnicastRemoteObject.exportObject(loginObj, 0);
+
+            Registry registry = LocateRegistry.getRegistry();
+            registry.bind("noob server", stub);
+            System.out.println("noob server is up and running");
+        } catch ( Exception e) {
+            System.out.println("Server throws exception: " + e.toString() );
+        }
+    }
+    
+    
+}
