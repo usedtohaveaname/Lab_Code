@@ -1,4 +1,8 @@
+package main;
+
+import resources.BCrypt;
 import java.sql.*;
+
 public class Dao {
     public  Dao(){}
     private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
@@ -58,7 +62,15 @@ public class Dao {
             stmt.execute(sql);
 
         } catch (SQLException se) {
-            se.printStackTrace();
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    //e.printStackTrace();
+                }
+            }
+            return false;
+            //se.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
