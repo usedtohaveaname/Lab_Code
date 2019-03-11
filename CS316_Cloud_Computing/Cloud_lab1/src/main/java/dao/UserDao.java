@@ -1,14 +1,20 @@
-package main.java;
+package main.java.dao;
 
 import main.resources.BCrypt;
 import java.sql.*;
 
-public class Dao {
-    public  Dao(){}
+public class UserDao {
+    public UserDao(){}
     private static final String URL = "jdbc:mysql://155.138.128.229:3306/cs316";
     private static final String USER_NAME = "user1";
     private static final String PASSWORD = "user123456";
 
+    /**
+     * This method checks if the credential provided by the user is valid.
+     * @param username
+     * @param password
+     * @return Return true if the operation is successful.
+     */
     public boolean login_authenticate(String username, String password) {
         Connection connection = null;
         try {
@@ -21,6 +27,7 @@ public class Dao {
             ResultSet rs = prst.executeQuery();
             if(rs.next()) {
                 System.out.println("get password:" + rs.getString("password"));
+                //check credentials
                 if (BCrypt.checkpw(password, rs.getString("password"))) {
                     rs.close();
                     prst.close();
@@ -46,11 +53,17 @@ public class Dao {
         }
         return false;
     }
+
+    /**
+     * This method try to write the credential of a user in to the database.
+     * @param username
+     * @param password
+     * @return Return true if the operation is successful.
+     */
     public boolean register_user(String username, String password){
         Connection connection = null;
         Statement stmt = null;
         try {
-
             //get connection to database
             connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
             stmt = connection.createStatement();
@@ -59,7 +72,6 @@ public class Dao {
             String sql = "insert into users (username, password)values" +
                     "(\""+username+"\",\""+hashed+"\")";
             stmt.execute(sql);
-
         } catch (SQLException se) {
             if (connection != null) {
                 try {
@@ -69,7 +81,6 @@ public class Dao {
                 }
             }
             return false;
-            //se.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
@@ -82,9 +93,5 @@ public class Dao {
             }
         }
         return true;
-    }
-    public static void main(String[] args) {
-        Dao dao = new Dao();
-        dao.login_authenticate("root","root");
     }
 }

@@ -1,5 +1,7 @@
 package main.java;
 
+import main.java.RmiUtility.ServerAction;
+
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -12,6 +14,7 @@ public class RMIClient {
         try {
             Registry reg = LocateRegistry.getRegistry("localhost",1099);
             stub = (ServerAction) reg.lookup("noobServer");
+            //a simple command-line interface
             System.out.println("Welcome");
             int quit = 0;
             while(true){
@@ -73,7 +76,7 @@ public class RMIClient {
             if(stub.register(username, password)){
              System.out.println("Congratulations, you have successfully signed up as a user!");
             } else {
-                System.out.println("Ooops, it seems the username exists");
+                System.out.println("Error! It seems the username exists");
             }
         } catch(Exception e) {
             e.printStackTrace();

@@ -1,5 +1,8 @@
 package main.java;
 
+import main.java.RmiUtility.ServerAction;
+import main.java.RmiUtility.ServerImpl;
+
 import java.rmi.registry.LocateRegistry;
 import java.rmi.Naming;
 public class RMIServer {

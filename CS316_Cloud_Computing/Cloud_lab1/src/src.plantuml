@@ -3,12 +3,12 @@
 title __Lab1's Class Diagram__\n
 
   package  {
-    class main.java.Dao {
+    class main.java.dao.UserDao {
         {static} - DRIVER_NAME : String
         {static} - URL : String
         {static} - USER_NAME : String
         {static} - PASSWORD : String
-        + main.java.Dao()
+        + main.java.dao.UserDao()
         + login_authenticate()
         + register_user()
         {static} + main()
@@ -18,7 +18,7 @@ title __Lab1's Class Diagram__\n
 
   package  {
     class main.java.RMIClient {
-        {static} - stub : main.java.ServerAction
+        {static} - stub : main.java.RmiUtility.ServerAction
         + main.java.RMIClient()
         {static} + main()
         {static} - register()
@@ -35,7 +35,7 @@ title __Lab1's Class Diagram__\n
   
 
   package  {
-    interface main.java.ServerAction {
+    interface main.java.RmiUtility.ServerAction {
         {abstract} + login()
         {abstract} + register()
     }
@@ -43,15 +43,15 @@ title __Lab1's Class Diagram__\n
   
 
   package  {
-    class main.java.ServerImpl {
-        + main.java.ServerImpl()
+    class main.java.RmiUtility.ServerImpl {
+        + main.java.RmiUtility.ServerImpl()
         + login()
         + register()
     }
   }
   
 
-  main.java.ServerImpl -up-|> main.java.ServerAction
-  main.java.ServerImpl -up-|> UnicastRemoteObject
+  main.java.RmiUtility.ServerImpl -up-|> main.java.RmiUtility.ServerAction
+  main.java.RmiUtility.ServerImpl -up-|> UnicastRemoteObject
 
 @enduml
