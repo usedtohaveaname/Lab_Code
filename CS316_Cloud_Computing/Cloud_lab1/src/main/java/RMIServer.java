@@ -1,4 +1,4 @@
-package main;
+package main.java;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.Naming;

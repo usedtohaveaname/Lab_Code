@@ -2,39 +2,37 @@
 
 title __CLOUD_LAB1's Class Diagram__\n
 
-  package  {
-    package resources {
-      class BCrypt {
-      }
+  package main.resources {
+    class BCrypt {
     }
   }
   
 
-  package  {
+  package main.java {
     class Dao {
     }
   }
   
 
-  package  {
+  package main.java {
     class RMIClient {
     }
   }
   
 
-  package  {
+  package main.java {
     class RMIServer {
     }
   }
   
 
-  package  {
+  package main.java {
     interface ServerAction {
     }
   }
   
 
-  package  {
+  package main.java {
     class ServerImpl {
     }
   }

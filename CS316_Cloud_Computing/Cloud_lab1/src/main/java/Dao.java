@@ -1,11 +1,10 @@
-package main;
+package main.java;
 
-import resources.BCrypt;
+import main.resources.BCrypt;
 import java.sql.*;
 
 public class Dao {
     public  Dao(){}
-    private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://155.138.128.229:3306/cs316";
     private static final String USER_NAME = "user1";
     private static final String PASSWORD = "user123456";
