@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc6ea8c6-b242-487c-a7c9-0a53eade469f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MessageBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5_1/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5_1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../junit-lab-temporary" beforeDir="false" afterPath="$PROJECT_DIR$/../junit-lab-temporary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab5_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5_1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../CS316_Cloud_Computing/Cloud_lab1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS316_Cloud_Computing/Cloud_lab1/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../CS316_Cloud_Computing/Cloud_lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS316_Cloud_Computing/Cloud_lab1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Deep_Learning_Spring2019/Assignment1/learning.py" beforeDir="false" />
@@ -20,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Lab5$MessageBuilder_ESTest.ic" NAME="MessageBuilder_ESTest Coverage Results" MODIFIED="1552894400260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Lab5$MessageBuilder_ESTest.ic" NAME="MessageBuilder_ESTest Coverage Results" MODIFIED="1552895565064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="15" />
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+            <state relative-caret-position="236">
+              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -186,7 +186,7 @@
     <property name="JAVA_HOME" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552895110656" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552895582294" />
     <property name="cores_evosuite_param" value="2" />
     <property name="evosuite_gui_dialog_height" value="426" />
     <property name="evosuite_gui_dialog_width" value="711" />
@@ -196,7 +196,7 @@
     <property name="mvn_location" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5046512" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -251,7 +251,7 @@
       <workItem from="1552889286040" duration="141000" />
       <workItem from="1552889431182" duration="1564000" />
       <workItem from="1552891056892" duration="3151000" />
-      <workItem from="1552894630824" duration="501000" />
+      <workItem from="1552894630824" duration="1084000" />
     </task>
     <servers />
   </component>
@@ -274,14 +274,26 @@
     <history-entry file="MessageBuilder_ESTest - 2019.03.18 at 15h 37m 01s.xml">
       <configuration name="MessageBuilder_ESTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MessageBuilder_ESTest - 2019.03.18 at 15h 47m 20s.xml">
+      <configuration name="MessageBuilder_ESTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageBuilder_ESTest - 2019.03.18 at 15h 48m 26s.xml">
+      <configuration name="MessageBuilder_ESTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageBuilder_ESTest - 2019.03.18 at 15h 52m 06s.xml">
+      <configuration name="MessageBuilder_ESTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageBuilder_ESTest - 2019.03.18 at 15h 52m 47s.xml">
+      <configuration name="MessageBuilder_ESTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5357000" />
+    <option name="totallyTimeSpent" value="5940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32618025" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32618025" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -290,16 +302,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920793" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32920793" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.32920793" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32920793" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32920793" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32920793" />
       <window_info anchor="bottom" id="EvoSuite" order="13" weight="0.32920793" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -377,15 +389,6 @@
     <entry file="file://$PROJECT_DIR$/Lab5.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/evo/MessageBuilder_ESTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <folding>
-            <element signature="e#0#1879#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/evo/MessageBuilder_ESTest_scaffolding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -396,10 +399,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/evo/MessageBuilder_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <folding>
+            <element signature="e#0#1879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        <state relative-caret-position="236">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
         </state>
       </provider>
     </entry>
